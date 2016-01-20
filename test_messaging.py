@@ -1,13 +1,13 @@
-import messaging
+import textreminder
 import unittest
 from unittest.mock import patch
 
 
 class MessagingTestCase(unittest.TestCase):
 
-    @patch('messaging.SMTP.send_message')
+    @patch('textreminder.SMTP.send_message')
     def test_send_message(self, send_message):
-        messaging.send_message('', '')
+        textreminder.send_message('', '')
         assert send_message.called
 
 
