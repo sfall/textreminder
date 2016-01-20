@@ -63,3 +63,7 @@ def register_task():
     target = convert(form['number'], form['carrier'])
     send_message(form['message'], target)
     return redirect(url_for('main'))
+
+
+if __name__ == '__main__':
+    app.run()
