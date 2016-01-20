@@ -21,6 +21,6 @@ def send_message(body, target):
     msg['Subject'] = 'TextReminder'
     msg['From'] = my_addr
     msg['To'] = target
-    msg.attach(MIMEText(body, 'html'))
+    msg.attach(MIMEText(body))
     server.send_message(msg)
     server.quit()

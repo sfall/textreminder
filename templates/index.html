@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TextReminder</title>
+  </head>
+  <body>
+    <form action="{{ url_for('register_task') }}" method="post">
+      <textarea name="message"></textarea>
+      <input type="text" name="number">
+      <select name="carrier">
+      {% for name in entries %}
+        <option value="{{ name }}">{{ name }}</option>
+      {% endfor %}
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
